@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:map="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MapsViewActivity" />
+    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        tools:context=".MapsViewActivity" />
+
+    <Button
+        android:id="@+id/btn_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/actualise"
+        tools:text="Actualise" />
+
+    <Button
+        android:id="@+id/btn_swap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/swap"
+        tools:text="Actualise" />
+
+</LinearLayout>
