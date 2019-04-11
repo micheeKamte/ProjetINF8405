@@ -140,6 +140,7 @@ public class MapsViewActivity extends FragmentActivity implements OnMapReadyCall
         mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
 
         mMap.setMinZoomPreference(10);
+        mMap.setMaxZoomPreference(30);
 
 
         LatLng position = new LatLng(latitude, longitude);

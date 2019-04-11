@@ -44,6 +44,11 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
         /***
          * Obtenir les instances des capteurs désirées
          */
+        sTemperature = sensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE);
+        if(sTemperature == null){
+            temperature_tv.setText("La température n'est pas supportée");
+        }
+
         sPressure = sensorManager.getDefaultSensor(Sensor.TYPE_PRESSURE);
         if(sPressure == null){
             pressure_tv.setText("La pression n'est pas supportée");
@@ -52,11 +57,6 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
         sLight = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
         if(sLight == null){
             light_tv.setText("La luminosité n'est pas supportée");
-        }
-
-        sTemperature = sensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE);
-        if(sTemperature == null){
-            temperature_tv.setText("La température n'est pas supportée");
         }
     }
 
@@ -93,16 +93,16 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
          * enregister les valeurs des capteurs
          */
         super.onResume();
+        if(sTemperature != null){
+            sensorManager.registerListener(SensorActivity.this, sTemperature, SensorManager.SENSOR_DELAY_NORMAL);
+        }
+
         if(sPressure != null){
             sensorManager.registerListener(SensorActivity.this, sPressure, SensorManager.SENSOR_DELAY_NORMAL);
         }
 
         if(sLight != null){
             sensorManager.registerListener(SensorActivity.this, sLight, SensorManager.SENSOR_DELAY_NORMAL);
-        }
-
-        if(sTemperature != null){
-            sensorManager.registerListener(SensorActivity.this, sTemperature, SensorManager.SENSOR_DELAY_NORMAL);
         }
 
     }
