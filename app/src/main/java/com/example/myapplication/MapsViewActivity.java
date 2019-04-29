@@ -56,13 +56,12 @@ public class MapsViewActivity extends FragmentActivity implements OnMapReadyCall
         refresh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                double lat = latitude;
+                double longit = longitude;
                 Intent intent = new Intent(getApplicationContext(), SensorActivity.class);
+                intent.putExtra("latitude", lat);
+                intent.putExtra("longitude", longit);
                 startActivity(intent);
-                /*
-                latitude = currentLocation.getLatitude();
-                longitude = currentLocation.getLongitude();
-                onMapReady(mMap);
-                */
             }
         });
 

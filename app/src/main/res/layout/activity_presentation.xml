@@ -23,6 +23,14 @@
     <include layout="@layout/content_main" />
 
     <android.support.design.widget.FloatingActionButton
+        android:id="@+id/magneto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        app:srcCompat="@android:drawable/ic_menu_compass" />
+
+    <android.support.design.widget.FloatingActionButton
         android:id="@+id/scan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

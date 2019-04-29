@@ -13,7 +13,7 @@ import android.view.View;
 public class Presentation extends AppCompatActivity {
 
     private boolean isFABOpen;
-    FloatingActionButton fab, scan, located;
+    FloatingActionButton fab, scan, located, magneto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +36,15 @@ public class Presentation extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MapsViewActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        magneto = findViewById(R.id.magneto);
+        magneto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MagnetoActivity.class);
                 startActivity(intent);
             }
         });
@@ -82,6 +91,7 @@ public class Presentation extends AppCompatActivity {
         isFABOpen = true;
         scan.animate().translationY(-getResources().getDimension(R.dimen.standard_55));
         located.animate().translationY(-getResources().getDimension(R.dimen.standard_105));
+        magneto.animate().translationY(-getResources().getDimension(R.dimen.standard_155));
     }
 
     /***
@@ -91,5 +101,6 @@ public class Presentation extends AppCompatActivity {
         isFABOpen = false;
         scan.animate().translationY(0);
         located.animate().translationY(0);
+        magneto.animate().translationY(0);
     }
 }

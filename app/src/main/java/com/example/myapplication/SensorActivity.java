@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.content.Context;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -20,20 +21,33 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
 
     Button saveInfo_bt, getInfo_bt;
 
+    private double latitude, longitude;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sensor);
+
+        Intent intent = getIntent();
+        if(intent != null){
+            if(intent.hasExtra("latitude")){
+                latitude = (double) intent.getDoubleExtra("latitude", 0);
+            }
+
+            if(intent.hasExtra("longitude")){
+                longitude = (double) intent.getDoubleExtra("longitude", 0);
+            }
+        }
 
         light_tv = (TextView)findViewById(R.id.light);
         pressure_tv = (TextView)findViewById(R.id.pressure);
         temperature_tv = (TextView)findViewById(R.id.temperature);
 
         longitude_tv = (TextView)findViewById(R.id.longitude);
-        longitude_tv.setText("Longitude : ...");
+        longitude_tv.setText("Longitude : " + longitude);
 
         latitude_tv = (TextView)findViewById(R.id.latitude);
-        latitude_tv.setText("Latitude : ...");
+        latitude_tv.setText("Latitude : " + latitude);
 
         /***
          * Obtenir une instance du service de capteur, et l'utiliser pour obtenir

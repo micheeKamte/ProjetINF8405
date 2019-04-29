@@ -18,7 +18,7 @@
         android:id="@+id/btn_refresh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/actualise"
+        android:text="informations"
         tools:text="Actualise" />
 
     <Button

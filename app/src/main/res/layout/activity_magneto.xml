@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/wallpaper"
+    android:id="@+id/full"
+    tools:context=".MagnetoActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="40 µTesla"
+        android:id="@+id/value"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_alignTop="@+id/framework"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ff808080"
+        android:textSize="50dp"
+        android:alpha=".6" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/framework"
+        android:src="@drawable/metaldetector"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignTop="@+id/internal" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/internal"
+        android:src="@drawable/sebmut"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:padding="10dp"
+        android:layout_marginBottom="20dp" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/frameLayout" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="© All Rights Reserved Mark Bus  "
+            android:layout_gravity="right|bottom"
+            android:textColor="#ff595959"
+            android:layout_marginBottom="2dp" />
+
+    </FrameLayout>
+
+</RelativeLayout>
