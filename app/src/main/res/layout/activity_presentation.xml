@@ -23,10 +23,18 @@
     <include layout="@layout/content_main" />
 
     <android.support.design.widget.FloatingActionButton
+        android:id="@+id/battery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="5dp"
+        app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+    <android.support.design.widget.FloatingActionButton
         android:id="@+id/magneto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="bottom|right"
         android:layout_margin="5dp"
         app:srcCompat="@android:drawable/ic_menu_compass" />
 
@@ -34,7 +42,7 @@
         android:id="@+id/scan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="bottom|right"
         android:layout_margin="5dp"
         app:srcCompat="@android:drawable/ic_menu_search" />
 
@@ -42,7 +50,7 @@
         android:id="@+id/located"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="bottom|right"
         android:layout_margin="5dp"
         app:srcCompat="@android:drawable/ic_menu_myplaces" />
 
@@ -50,7 +58,7 @@
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="bottom|right"
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/btn_star" />
 

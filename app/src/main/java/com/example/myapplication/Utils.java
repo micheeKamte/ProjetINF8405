@@ -4,11 +4,14 @@ package com.example.myapplication;
 import android.app.Activity;
 import android.content.Intent;
 
+import java.util.ArrayList;
+
 public class Utils {
     private static int sTheme;
     public final static int THEME_DEFAULT = 0;
     public final static int THEME_BLACK = 1;
     public static boolean isActive = true;
+    public static final ArrayList<DataUser> dataList = new ArrayList<DataUser>();
 
     /***
      * Définir le theme de l'activité et redemarrer l'activité avec ce theme

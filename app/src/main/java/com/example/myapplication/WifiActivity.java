@@ -69,12 +69,18 @@ public class WifiActivity extends AppCompatActivity {
     BroadcastReceiver wifiReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
+            arrayList.clear();
             results = wifiManager.getScanResults();
             unregisterReceiver(this);
 
             for(ScanResult scanResult : results){
-                arrayList.add(scanResult.SSID );
-                adapter.notifyDataSetChanged();
+                if(scanResult.equals("") || scanResult.equals(" ")){
+                    continue;
+                } else {
+                    arrayList.add(scanResult.SSID );
+                    adapter.notifyDataSetChanged();
+                }
+
             }
         }
     };

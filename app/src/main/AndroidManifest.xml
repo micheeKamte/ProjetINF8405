@@ -19,7 +19,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MagnetoActivity"></activity>
+        <activity android:name=".PositionActivity"></activity>
+        <activity android:name=".BatteryActivity" />
+        <activity android:name=".MagnetoActivity" />
         <activity android:name=".SensorActivity" />
         <activity android:name=".WifiActivity" />
         <!--

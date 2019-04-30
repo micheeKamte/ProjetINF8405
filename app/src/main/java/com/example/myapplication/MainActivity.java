@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         appName = findViewById(R.id.tv_applicationName);
-        appName.setText("BluetoothScanner");
+        appName.setText("Utilitaire App.");
 
         devName_1 = findViewById(R.id.devName1);
         devName_1.setText("Benjamin SONKWE");
